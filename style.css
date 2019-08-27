@@ -1,0 +1,68 @@
+*{
+    max-width: 100%;
+    background-color: rgb(97, 189, 155);
+}
+body{
+    background-image: url("inter2.jpg");
+    background-size: 5%;   
+}
+#header{
+    display: flex;
+    align-items: center;
+}
+
+
+.theme{
+    float: left;
+    margin-left: 24%;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+h1{
+    margin-left: 25%;
+    font-size : 100px;
+
+}
+#quiz{
+    background-color: rgb(221, 212, 212);
+    width: 60%;
+    margin: auto;
+    /* text-align: center; */
+}
+#quiz h3{
+    text-align: center;
+}
+
+#titre{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size : 200%;
+}
+
+button{
+    font-size: 30px;
+    width: auto;
+    padding: 10px 30px;
+    margin-top: 5%;
+}
+
+h3{
+    font-size: 150%;
+}
+
+#refresh{
+    border-radius: 10%;
+    color: white;
+    display: flex;
+    margin-top: 3px;
+    margin-right: auto;
+    margin-left: auto;
+    padding : 1%;
+    background-color: brown;
+}
+
+#win{
+    align-items: center;
+}
