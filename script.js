@@ -1,5 +1,5 @@
 
-document.querySelector('.response').style.display= 'none'; // reponse hidden
+document.querySelector('.response').style.display= 'none'; // question/reponse hidden
 
 var index = 0, quiz, titre, question, choice, choices, chA, chB, chC, correct = 0; // declaration des variables utilisées
 var questions = [
@@ -31,26 +31,18 @@ function game(x) {
 
 function renderQuestion() { //rendu des reponses correctes avec fin du quiz
     quest = game("quiz");
-    while(index >= questions.length && correct >=10) {
+    while(index >= questions.length && correct >=13) {
         quest.innerHTML = "<h2> Tu as " + correct + " réponses correctes sur " + questions.length + "  questions : <br>Bien joué l'ami</h2>"; //Gagné
-        game("titre").innerHTML = "<h2> Quiz terminé </h2>";
-        game('quiz').style.textAlign = 'center'; //centre le renvoi 
-        document.querySelector('.response').style.display= 'block';
-        document.querySelector('.response').style.color= 'red';  //css.js
-        document.querySelector('.response').style.fontSize= '22px';
-        index = 0;
-        correct = 0;
+        result();
         return false;
         
-    }if(index >= questions.length && correct <10) {
+    }if(index >= questions.length && correct <13 && correct >=8) {
+        quest.innerHTML = "<h2> Tu as " + correct + " réponses correctes sur " + questions.length + "  questions : </br>Encore un peu de travail  à faire</h2>"; // Perdu
+        result();
+        return false;
+    }if(index >= questions.length && correct <8) {
         quest.innerHTML = "<h2> Tu as " + correct + " réponses correctes sur " + questions.length + "  questions : </br>La librairie la plus proche est ta meilleure amie</h2>"; // Perdu
-        game("titre").innerHTML ="<h2> Quiz terminé </h2>";
-        game('quiz').style.textAlign = 'center'; //centre le renvoi
-        document.querySelector('.response').style.display= 'block';
-        document.querySelector('.response').style.color= 'red';
-        document.querySelector('.response').style.fontSize= '22px';
-        index = 0;
-        correct = 0;
+        result();
         return false;
     }
 
@@ -65,7 +57,6 @@ function renderQuestion() { //rendu des reponses correctes avec fin du quiz
     quest.innerHTML += "<input type='radio' name='choices' value='C'> " + chC + "<br>";
     quest.innerHTML += "<button  onclick='checkAnswer()' > Question suivante ! </button>";
     quest.style.fontSize = '22px';
-
 }
 
 function checkAnswer() {      //avancement du process avec calcul des bonnes réponses
@@ -82,6 +73,16 @@ function checkAnswer() {      //avancement du process avec calcul des bonnes ré
     choice = 0;              //init de choice pr eviter d'enregistrer le dernier resultat courant 
 }
 
+function result(){
+    game("titre").innerHTML ="<h2> Quiz terminé </h2>";
+    game('quiz').style.textAlign = 'center'; //centre le renvoi
+    document.querySelector('.response').style.display= 'block';
+    document.querySelector('.response').style.color= 'red';
+    document.querySelector('.response').style.fontSize= '22px';
+    index = 0;
+    correct = 0;
+    
+}
 window.addEventListener("load", renderQuestion, false);
 
 

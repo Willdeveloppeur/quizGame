@@ -17,7 +17,7 @@ body{
 .theme{
     float: left;
     margin-left: 24%;
-    border-radius: 50%;
+    border-radius: 80%;
     width: 200px;
 }
 h1{
@@ -69,4 +69,5 @@ h3{
 }
 .response{
     text-align: center;
+    font-size: 30px;
 }
