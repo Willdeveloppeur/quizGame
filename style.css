@@ -29,8 +29,9 @@ h1{
     background-color: rgb(221, 212, 212);
     width: 75%;
     margin: auto;
-    
+    font-size : 30px;    
 }
+
 #quiz h3{
     text-align: center;
 }
@@ -49,10 +50,14 @@ button{
     margin-top: 5%;
 }
 
-h3{
+h2{
     font-size: 150%;
+    text-align: center;
 }
 
+h3{
+    background-color:rgb(136, 128, 128);
+}
 #refresh{
     border-radius: 10%;
     color: white;
@@ -64,10 +69,32 @@ h3{
     background-color: brown;
 }
 
-#win{
-    align-items: center;
-}
+
 .response{
-    text-align: center;
+    margin: 50px 100px; 
+    line-height: 130%;
     font-size: 30px;
+    display: none;
+    color : rgb(66, 95, 11);
+}
+
+input #choice{
+    font-size : 300px;
+}
+
+#btn{
+    color : rgb(46, 0, 153);
+    
+}
+#lb1{
+    color: rgb(0, 102, 9);
+    background-color:rgb(221, 212, 212);
+}
+#lb2{
+    color: rgb(149, 165, 3);
+    background-color:rgb(221, 212, 212);
+}
+#lb3{
+    color: red;
+    background-color:rgb(221, 212, 212);
 }
